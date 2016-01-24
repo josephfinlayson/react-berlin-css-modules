@@ -8,7 +8,6 @@
   },
   "scripts": {
     "postinstall": "jspm install",
-    "precommit": "npm test",
     "pretest": "node_modules/.bin/standard",
     "start": "node server",
     "test": "node run-tests",
