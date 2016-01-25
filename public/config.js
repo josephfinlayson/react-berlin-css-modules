@@ -5,7 +5,8 @@ System.config({
     "optional": [
       "runtime",
       "optimisation.modules.system"
-    ]
+    ],
+    "stage": 0
   },
   paths: {
     "github:*": "jspm_packages/github/*",
@@ -18,13 +19,18 @@ System.config({
     "babel-runtime": "npm:babel-runtime@5.8.34",
     "capaj/systemjs-hot-reloader": "github:capaj/systemjs-hot-reloader@0.5.1",
     "core-js": "npm:core-js@1.2.6",
+    "css": "npm:jspm-loader-css@1.0.1-beta1",
+    "css-global": "npm:jspm-loader-css@1.0.0",
     "jspm-loader-css": "npm:jspm-loader-css@1.0.1-beta1",
     "mobservable": "npm:mobservable@1.2.0",
     "mobservable-react": "npm:mobservable-react@2.1.1",
+    "path": "npm:path@0.11.14",
     "postcss-nested": "npm:postcss-nested@1.0.0",
+    "postcss-safe-parser": "npm:postcss-safe-parser@1.0.4",
     "postcss-simple-vars": "npm:postcss-simple-vars@1.2.0",
-    "react": "npm:react@0.14.5",
-    "react-dom": "npm:react-dom@0.14.5",
+    "react": "npm:react@0.14.6",
+    "react-addons-css-transition-group": "npm:react-addons-css-transition-group@0.14.6",
+    "react-dom": "npm:react-dom@0.14.6",
     "react-intl": "npm:react-intl@2.0.0-beta-2",
     "react-router": "npm:react-router@1.0.3",
     "react-tap-event-plugin": "npm:react-tap-event-plugin@0.2.1",
@@ -228,6 +234,14 @@ System.config({
       "public-encrypt": "npm:public-encrypt@4.0.0",
       "randombytes": "npm:randombytes@2.0.1"
     },
+    "npm:css-modules-loader-core@0.0.12": {
+      "fs": "github:jspm/nodelibs-fs@0.1.2",
+      "path": "github:jspm/nodelibs-path@0.1.0",
+      "postcss": "npm:postcss@4.1.16",
+      "postcss-modules-extract-imports": "npm:postcss-modules-extract-imports@0.0.5",
+      "postcss-modules-local-by-default": "npm:postcss-modules-local-by-default@0.0.9",
+      "postcss-modules-scope": "npm:postcss-modules-scope@0.0.8"
+    },
     "npm:css-modules-loader-core@1.0.0": {
       "fs": "github:jspm/nodelibs-fs@0.1.2",
       "icss-replace-symbols": "npm:icss-replace-symbols@1.0.2",
@@ -237,6 +251,9 @@ System.config({
       "postcss-modules-local-by-default": "npm:postcss-modules-local-by-default@1.0.0",
       "postcss-modules-scope": "npm:postcss-modules-scope@1.0.0",
       "postcss-modules-values": "npm:postcss-modules-values@1.1.0"
+    },
+    "npm:css-selector-tokenizer@0.4.1": {
+      "fastparse": "npm:fastparse@1.1.1"
     },
     "npm:css-selector-tokenizer@0.5.4": {
       "cssesc": "npm:cssesc@0.1.0",
@@ -281,6 +298,11 @@ System.config({
       "process": "github:jspm/nodelibs-process@0.1.2",
       "through": "npm:through@2.3.8"
     },
+    "npm:es6-promise@2.3.0": {
+      "assert": "github:jspm/nodelibs-assert@0.1.0",
+      "process": "github:jspm/nodelibs-process@0.1.2",
+      "util": "github:jspm/nodelibs-util@0.1.0"
+    },
     "npm:esprima-fb@13001.1001.0-dev-harmony-fb": {
       "fs": "github:jspm/nodelibs-fs@0.1.2",
       "process": "github:jspm/nodelibs-process@0.1.2"
@@ -306,6 +328,9 @@ System.config({
       "promise": "npm:promise@7.1.1",
       "ua-parser-js": "npm:ua-parser-js@0.7.10",
       "whatwg-fetch": "npm:whatwg-fetch@0.9.0"
+    },
+    "npm:fbjs@0.6.1": {
+      "process": "github:jspm/nodelibs-process@0.1.2"
     },
     "npm:has-flag@1.0.0": {
       "process": "github:jspm/nodelibs-process@0.1.2"
@@ -337,6 +362,12 @@ System.config({
     },
     "npm:js-base64@2.1.9": {
       "buffer": "github:jspm/nodelibs-buffer@0.1.0"
+    },
+    "npm:jspm-loader-css@1.0.0": {
+      "css-modules-loader-core": "npm:css-modules-loader-core@0.0.12",
+      "debounce": "npm:debounce@1.0.0",
+      "path": "npm:path@0.12.7",
+      "toposort": "npm:toposort@0.2.12"
     },
     "npm:jspm-loader-css@1.0.1-beta1": {
       "css-modules-loader-core": "npm:css-modules-loader-core@1.0.0",
@@ -379,6 +410,11 @@ System.config({
     "npm:path-browserify@0.0.0": {
       "process": "github:jspm/nodelibs-process@0.1.2"
     },
+    "npm:path@0.11.14": {
+      "fs": "github:jspm/nodelibs-fs@0.1.2",
+      "process": "github:jspm/nodelibs-process@0.1.2",
+      "util": "github:jspm/nodelibs-util@0.1.0"
+    },
     "npm:path@0.12.7": {
       "process": "npm:process@0.11.2",
       "util": "npm:util@0.10.3"
@@ -392,13 +428,26 @@ System.config({
       "process": "github:jspm/nodelibs-process@0.1.2",
       "systemjs-json": "github:systemjs/plugin-json@0.1.0"
     },
+    "npm:postcss-modules-extract-imports@0.0.5": {
+      "postcss": "npm:postcss@4.1.16",
+      "process": "github:jspm/nodelibs-process@0.1.2"
+    },
     "npm:postcss-modules-extract-imports@1.0.0": {
       "postcss": "npm:postcss@5.0.10",
       "process": "github:jspm/nodelibs-process@0.1.2"
     },
+    "npm:postcss-modules-local-by-default@0.0.9": {
+      "css-selector-tokenizer": "npm:css-selector-tokenizer@0.4.1",
+      "postcss": "npm:postcss@4.1.16"
+    },
     "npm:postcss-modules-local-by-default@1.0.0": {
       "css-selector-tokenizer": "npm:css-selector-tokenizer@0.5.4",
       "postcss": "npm:postcss@5.0.10"
+    },
+    "npm:postcss-modules-scope@0.0.8": {
+      "css-selector-tokenizer": "npm:css-selector-tokenizer@0.5.4",
+      "postcss": "npm:postcss@4.1.16",
+      "process": "github:jspm/nodelibs-process@0.1.2"
     },
     "npm:postcss-modules-scope@1.0.0": {
       "css-selector-tokenizer": "npm:css-selector-tokenizer@0.5.4",
@@ -413,8 +462,20 @@ System.config({
       "postcss": "npm:postcss@5.0.14",
       "process": "github:jspm/nodelibs-process@0.1.2"
     },
+    "npm:postcss-safe-parser@1.0.4": {
+      "postcss": "npm:postcss@5.0.14"
+    },
     "npm:postcss-simple-vars@1.2.0": {
       "postcss": "npm:postcss@5.0.14"
+    },
+    "npm:postcss@4.1.16": {
+      "es6-promise": "npm:es6-promise@2.3.0",
+      "fs": "github:jspm/nodelibs-fs@0.1.2",
+      "js-base64": "npm:js-base64@2.1.9",
+      "path": "github:jspm/nodelibs-path@0.1.0",
+      "process": "github:jspm/nodelibs-process@0.1.2",
+      "source-map": "npm:source-map@0.4.4",
+      "systemjs-json": "github:systemjs/plugin-json@0.1.0"
     },
     "npm:postcss@5.0.10": {
       "fs": "github:jspm/nodelibs-fs@0.1.2",
@@ -460,8 +521,14 @@ System.config({
       "crypto": "github:jspm/nodelibs-crypto@0.1.0",
       "process": "github:jspm/nodelibs-process@0.1.2"
     },
+    "npm:react-addons-css-transition-group@0.14.6": {
+      "react": "npm:react@0.14.6"
+    },
     "npm:react-dom@0.14.5": {
       "react": "npm:react@0.14.5"
+    },
+    "npm:react-dom@0.14.6": {
+      "react": "npm:react@0.14.6"
     },
     "npm:react-intl@2.0.0-beta-2": {
       "intl-format-cache": "npm:intl-format-cache@2.0.5",
@@ -488,6 +555,10 @@ System.config({
       "fbjs": "npm:fbjs@0.6.0",
       "process": "github:jspm/nodelibs-process@0.1.2"
     },
+    "npm:react@0.14.6": {
+      "fbjs": "npm:fbjs@0.6.1",
+      "process": "github:jspm/nodelibs-process@0.1.2"
+    },
     "npm:readable-stream@1.1.13": {
       "buffer": "github:jspm/nodelibs-buffer@0.1.0",
       "core-util-is": "npm:core-util-is@1.0.2",
@@ -512,6 +583,10 @@ System.config({
       "amdefine": "npm:amdefine@1.0.0",
       "fs": "github:jspm/nodelibs-fs@0.1.2",
       "path": "github:jspm/nodelibs-path@0.1.0",
+      "process": "github:jspm/nodelibs-process@0.1.2"
+    },
+    "npm:source-map@0.4.4": {
+      "amdefine": "npm:amdefine@1.0.0",
       "process": "github:jspm/nodelibs-process@0.1.2"
     },
     "npm:source-map@0.5.3": {
