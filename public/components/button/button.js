@@ -2,18 +2,15 @@ import React, {PropTypes} from 'react'
 import counter from '../../stores/example-store'
 import styles from './button.css!';
 
-const Test = (props) => {
+const Button = (props) => {
 
-    return <div className={styles.button}>
-        <div className={styles.text}>
+    return <div className={styles.button}
+                onClick={props.onClick}>
             {props.children || 'default button text'}
-        </div>
-
         <div className={styles.icon} ></div>
-
     </div>
 
 };
 
 
-export default Test
+export default Button

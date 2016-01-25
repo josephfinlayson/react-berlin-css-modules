@@ -1,0 +1,13 @@
+:local(.animator){
+    display: flex;
+    flex-direction: row;
+    > div {
+        margin: 20px;
+    }
+}
+
+:local(.box) {
+    composes: smallBox from '../../common/standard-styles.css';
+    composes: bigText from '../../common/typography.css';
+    text-align: center;
+}

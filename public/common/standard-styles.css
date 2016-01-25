@@ -1,15 +1,15 @@
 /*$blue:  #056ef0;*/
 
-.standardBorder {
+:local(.standardBorder) {
     border: 5px solid blue;
 }
 
-.smallBox {
+:local(.smallBox) {
     height: 50px;
     width: 200px;
 }
 
-.standardButton {
+:local(.standardButton) {
     composes: smallBox;
     composes: standardBorder;
     text-align: center;
@@ -17,8 +17,8 @@
     padding: 5px;
 }
 
-.icon {
+:local(.icon) {
     background-image: url('http://dl.hiapphere.com/data/icon/201409/HiAppHere_com_kov.theme.lumos.png');
-    height: 10px;
-    width: 10px;
+    height: 40px;
+    width: 50px;
 }

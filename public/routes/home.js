@@ -1,11 +1,12 @@
 import React from 'react'
 import styles  from '../styles.css!';
 import Button from '../components/button/button'
+import Animator from '../components/animator/animator.js';
 
 export default class Home extends React.Component {
 
-    constructor (...props) {
-        super(...props)
+    constructor (props) {
+        super(props)
     }
 
     render () {
@@ -16,5 +17,5 @@ export default class Home extends React.Component {
             </div>
         </div>
     }
-
+    //<Animator />
 }

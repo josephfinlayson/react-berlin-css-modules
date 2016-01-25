@@ -1,0 +1,23 @@
+:local(.enter) {
+    opacity: 0.01;
+    transform: rotateY(180deg);
+}
+
+:local(.enterActive) {
+    opacity: 1;
+    transition: 500ms ease-in;
+    transition-property: opacity, transform;
+    transform: rotateY(0);
+}
+
+:local(.leave) {
+    opacity: 1;
+    transform: rotateY(0);
+}
+
+:local(.leaveActive) {
+    opacity: 0.01;
+    transition: 300ms ease-in;
+    transition-property: opacity, transform;
+    transform: rotateY(180deg);
+}
