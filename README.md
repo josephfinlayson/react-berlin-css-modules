@@ -6,7 +6,9 @@ lightweight React.js boilerplate with [JSPM](https://github.com/jspm/jspm-cli) a
 ### Quickstart to development
 ```
 git clone git@github.com:capaj/jspm-react.git
-npm i
+npm install -g jspm
+npm install
+jspm install
 npm start
 ```
 
