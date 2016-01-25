@@ -1,0 +1,13 @@
+:local(.button) {
+  composes: standardButton from '../../common/standard-styles.css';
+  color: blue;
+}
+
+:local(.text) {
+  composes: standardText from '../../common/typography.css';
+  color: purple;
+}
+
+:local(.icon) {
+  composes: icon from '../../common/standard-styles.css';
+}

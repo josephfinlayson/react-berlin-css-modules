@@ -1,17 +1,20 @@
 import React from 'react'
-import Stateless from '../components/stateless-sample'
+import styles  from '../styles.css!';
+import Button from '../components/button/button'
 
 export default class Home extends React.Component {
-  constructor (...props) {
-    super(...props)
-  }
 
-  render () {
-    return <div>
-      <h2>Home route</h2>
-      <Stateless name='stranger'/>
-      <p>you can try editing it as you like to test this out</p>
+    constructor (...props) {
+        super(...props)
+    }
 
-    </div>
-  }
+    render () {
+        return <div className={styles.home}>
+            <h2 className={styles.header}>CSS Modules demo</h2>
+            <div className={styles.wrapper}>
+                <Button />
+            </div>
+        </div>
+    }
+
 }
