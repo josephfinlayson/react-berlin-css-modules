@@ -1,0 +1,376 @@
+// New to Stylus? Check out http://learnboost.github.io/stylus
+// Use modern CSS thanks to Autoprefixer: https://github.com/ai/autoprefixer
+
+// Import CSS from "node_modules" and "bower_components"
+// thanks to Stylus' "import css" and "paths" options
+
+@import 'prism/themes/prism-okaidia.css'
+// Check out "bower_components/prism/themes/" for available themes
+
+li
+  font-family: didot, times new roman, serif
+  font-style: italic
+
+.avatar
+  width: 100px
+  border-radius: @width
+  .avatars &
+    width: 80px
+    display: inline-block
+    margin: 10px 10px 0
+  .big-avatars &
+    width: 120px
+    margin: 16px 16px 0
+
+.avatars
+  margin: 0 60px
+
+.seek-logo
+  background-image: url('../images/seek.svg')
+  width: 300px
+  height: 300px
+  background-size: auto 100%
+  position: relative
+  left: 3px
+
+.static
+  background-size: contain
+  background-repeat: no-repeat
+  transform: none !important
+  &.bespoke-backdrop-active
+    opacity: 1
+
+.space
+  background-image: url('../images/space.jpg')
+  transform-origin: 50% 100%
+  &.bespoke-backdrop-active
+    transition: opacity 5s ease, transform 20s ease
+
+.chapter-13
+  background-image: url('../images/chapter-13.jpg')
+  background-position: 50% 20%
+
+.css-zen-garden-0
+  background-image: url('../images/css-zen-garden-0.png')
+.css-zen-garden-1
+  background-image: url('../images/css-zen-garden-1.png')
+.css-zen-garden-2
+  background-image: url('../images/css-zen-garden-2.png')
+.css-zen-garden-3
+  background-image: url('../images/css-zen-garden-3.png')
+
+.initial-commit
+  background-color: white
+  background-image: url('../images/initial-commit.png')
+  background-position: 0 50%
+  transform-origin: 20% 30%
+
+.gulp-logo
+  background-image: url('../images/gulp-logo.jpg')
+  &.bespoke-backdrop-active
+    opacity: 1
+
+.sass-logo
+  background-image: url('../images/sass-logo.png')
+  &.bespoke-backdrop-active
+    opacity: 1
+
+.postcss-logo
+  background-image: url('../images/postcss-logo-dark.png')
+  &.bespoke-backdrop-active
+    opacity: 1
+
+.lego
+  background-image: url('../images/lego.gif')
+  &.bespoke-backdrop-active
+    opacity: .1
+
+[data-bespoke-backdrop="bem"]
+  color: black
+.bem
+  background-image: url('../images/bem.svg')
+  background-size: contain
+  background-repeat: no-repeat
+  transform: translateZ(0) translateX(9%) translateY(-20px) scale(1)
+  &.bespoke-backdrop-active
+    opacity: 1
+  &.bespoke-backdrop-active,
+  &.bespoke-backdrop-before
+    transform: translateZ(0) translateX(9%) translateY(-20px) scale(0.6)
+
+[data-bespoke-backdrop="jquery-ui-datepicker"]
+  h2
+    background: black
+    padding: 20px 18px 20px 30px
+.jquery-ui-datepicker
+  background-image: url('../images/jquery-ui-datepicker.png')
+  background-position: 0 50%
+  &.bespoke-backdrop-active
+    opacity: .5
+
+.react
+  background-image: url('../images/react.png')
+
+.bespoke-bullet.show
+  opacity: 1
+
+.circles
+  position: absolute
+  z-index: 1
+  width: 270px
+  height: 150px
+  top: 50%
+  left: 50%
+  margin-left: -135px
+  margin-top: -75px
+  &.circles--multiple
+    z-index: 0
+  div
+    transition: all 1s cubic-bezier(0.725, -0.365, 0.175, 1.000)
+    width: 150px
+    height: 150px
+    border-radius: 150px
+    position: absolute
+    top: 0
+    left: 50%
+    margin-left: -75px
+    &:after
+      display: block
+      width: 100%
+      text-align: center
+      color: #222
+      line-height: 150px
+      font-size: 30px
+  .css
+    z-index: 1
+    background: white
+    .show-css-and-js.bespoke-bullet-active &
+      transform: translateX(60px)
+    &:after
+      content: 'CSS'
+  .js
+    background: yellow
+    &:after
+      content: 'JS'
+    .show-css-and-js.bespoke-bullet-active &
+      transform: translateX(-60px)
+  .component
+    opacity: 0
+    transition: all .6s ease
+    border: 1px solid #888
+    background: #111
+    transform: scale(2.5)
+    z-index: -1
+    &:after
+      content: 'Component'
+      position: absolute
+      top: 0
+      color: #888
+      font-size: 14px
+      top: -48px
+    .show-component.bespoke-bullet-active &
+      opacity: 1
+
+.show-component-tree
+  transition: all 1.6s cubic-bezier(0.725, -0.365, 0.175, 1.000)
+  &.bespoke-bullet-active
+    transform: translateY(-150px) scale(0.3)
+
+.circles
+  transition: all 1s cubic-bezier(0.725, -0.365, 0.175, 1.000)
+
+.circles--multiple-0
+  transition-delay: .3s
+.circles--multiple-1
+  transition-delay: .4s
+.circles--multiple-2
+  transition-delay: .5s
+.circles--multiple-3
+  transition-delay: .6s
+.circles--multiple-4
+  transition-delay: .7s
+.circles--multiple-5
+  transition-delay: .8s
+.circles--multiple-6
+  transition-delay: .9s
+.circles--multiple-7
+  transition-delay: 1s
+
+.show-component-tree.bespoke-bullet-active
+  .circles--multiple-0
+    transform: translateY(500px)
+  .circles--multiple-1
+    transform: translateY(500px) translateX(-500px)
+  .circles--multiple-2
+    transform: translateY(500px) translateX(500px)
+  .circles--multiple-3
+    transform: translateY(1000px)
+  .circles--multiple-4
+    transform: translateY(1000px) translateX(-500px)
+  .circles--multiple-5
+    transform: translateY(1000px) translateX(-1000px)
+  .circles--multiple-6
+    transform: translateY(1000px) translateX(500px)
+  .circles--multiple-7
+    transform: translateY(1000px) translateX(1000px)
+
+
+// Webpack logo stuff
+@import './webpack-logo.css'
+
+.webpack-logo
+  position: absolute
+  top: 50%
+  left: 50%
+  width: 200px
+  height: 200px
+  margin-bottom: -48px
+  margin-left: -100px
+  margin-top: -110px
+  zoom: 3
+  transform: scale(1)
+  opacity: 0.6
+
+.logo
+  transform: rotateX(0deg)
+
+// New stuff...
+
+ul.minimal li:before
+  display: none
+
+.vjeux
+  background-image: url('../images/vjeux.jpg')
+  transform-origin: 55% 20%
+  &.bespoke-backdrop-active
+    opacity: .2
+
+.css-in-js-slide
+  background-image: url('../images/css-in-js-slide.png')
+  background-color: black
+  background-size: contain
+  background-repeat: no-repeat
+  transform: none
+  &.bespoke-backdrop-active
+    opacity: 1
+
+.michelebertoli
+  background-image: url('../images/michelebertoli.jpg')
+  transform-origin: 50% 30%
+  &.bespoke-backdrop-active
+    opacity: .5
+
+.geelen
+  background-image: url('../images/avatars/geelen.jpg')
+  transform-origin: 50% 30%
+  &.bespoke-backdrop-active
+    opacity: .5
+
+.andreypopp
+  background-image: url('../images/avatars/andreypopp.png')
+  transform-origin: 50% 50%
+  &.bespoke-backdrop-active
+    opacity: .2
+
+.want
+  background-image: url('../images/want.gif')
+  transform: none
+  &.bespoke-backdrop-active
+    opacity: 1
+
+.legobricks
+  background-image: url('../images/legobricks.jpg')
+  transform-origin: 50% 60%
+  &.bespoke-backdrop-active
+    opacity: .3
+
+.mjackson
+  background-image: url('../images/mjackson.jpg')
+  transform-origin: 50% 30%
+  &.bespoke-backdrop-active
+    opacity: .3
+
+.larrydavid
+  background-image: url('../images/larrydavid.gif')
+  transform: none !important
+  background-position: 50% 0
+  &.bespoke-backdrop-active
+    opacity: .6
+
+.scared
+  background-image: url('../images/scared.gif')
+  transform: none !important
+  background-position: 50% 0
+  &.bespoke-backdrop-active
+    opacity: .4
+
+.experiment
+  background-image: url('../images/experiment.jpg')
+  background-position: 100% 0
+  transform-origin: 60% 30%
+  &.bespoke-backdrop-active
+    opacity: .4
+
+.maze
+  background-image: url('../images/maze.gif')
+  transform: none !important
+  &.bespoke-backdrop-active
+    opacity: 1
+
+
+// Ryan Seddon, you legend.
+.hide-checkbox, .show-checkbox
+  opacity: 1 !important
+.hide-checkbox input,
+.hide-checkbox h2
+  transition: opacity 2s ease
+  opacity: 0
+.show-checkbox.bespoke-bullet-active input,
+.show-checkbox.bespoke-bullet-active h2
+  opacity: 1
+.takeoff
+  width: 100px;
+  height: 200px;
+  margin: 0 auto;
+  position: relative;
+  left: 22px;
+.takeoff input + label
+  width: 56px;
+  height: 118px;
+  background: url('../images/rocket.png') 0 0 no-repeat;
+  display: block;
+  transition: transform 8s;
+  transition-timing-function: cubic-bezier(0.38, -0.1, 0.46, 0.45);
+.takeoff input:checked + label
+  height: 156px;
+  background-position: 0 100%;
+  transform: translateY(-20em);
+.takeoff input ~ .stars
+  background: url('../images/star-background.jpg')
+  opacity: 0.4;
+  background-size: cover
+  position: absolute
+  z-index: -2
+  left: -500px
+  top: -1000px
+  width: 1100px
+  height: 2000px
+  transition: all 5s ease
+.takeoff input:checked ~ .stars
+  transform: translateY(200px)
+  transition: all 10s ease
+  transition-delay: .3s
+.takeoff input ~ .planet
+  position: absolute;
+  bottom: -1950px;
+  left: -980px;
+  width: 2040px;
+  height: 2040px;
+  background: #222;
+  box-shadow: 0 0 100px rgba(100%, 100%, 100%, 0.5);
+  border-radius: 2040px;
+  z-index: -1;
+  transition: all 5s ease
+  transition-delay: .3s
+.takeoff input:checked ~ .planet
+  transform: translateY(400px)

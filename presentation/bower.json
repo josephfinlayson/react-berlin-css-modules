@@ -1,0 +1,7 @@
+{
+  "name": "presentation-the-case-for-css-modules",
+  "version": "0.0.0",
+  "dependencies": {
+    "prism": "gh-pages"
+  }
+}
